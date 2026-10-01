@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apuração Tributária no Lucro Presumido — Projeto Acadêmico</title>
+<style>
+  :root{
+    --bg:#f5f7fb; --card:#fff; --ink:#172033; --muted:#647084;
+    --accent:#2457d6; --accent2:#e9efff; --line:#dfe5ef;
+    --code:#111827; --soft:#f0f3f8;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+  header{background:linear-gradient(135deg,#172554,#2457d6);color:#fff;padding:64px 24px}
+  .wrap{max-width:1100px;margin:auto}
+  .eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:800;opacity:.82}
+  h1{font-size:clamp(2rem,5vw,4rem);line-height:1.05;margin:12px 0 18px;max-width:900px}
+  .lead{font-size:1.15rem;max-width:820px;color:#e8edff}
+  main{padding:36px 24px 70px}
+  section{margin:0 0 34px}
+  h2{font-size:1.65rem;margin:0 0 14px}
+  h3{margin-top:0}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:0 6px 20px rgba(20,35,70,.05)}
+  .tag{display:inline-block;background:var(--accent2);color:var(--accent);font-weight:800;border-radius:999px;padding:4px 10px;font-size:.78rem;margin-bottom:10px}
+  .formula{background:var(--code);color:#f8fafc;border-radius:12px;padding:18px;overflow:auto;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88rem;white-space:pre-wrap}
+  .explain{background:var(--soft);border-left:4px solid var(--accent);padding:14px 16px;border-radius:8px;margin-top:14px}
+  table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden}
+  th,td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left}
+  th{background:#eef2f8}
+  .flow{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .step{background:#fff;border:1px solid var(--line);padding:12px 16px;border-radius:12px;font-weight:700}
+  .arrow{color:var(--accent);font-weight:900}
+  footer{border-top:1px solid var(--line);padding:24px;color:var(--muted);font-size:.9rem}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Projeto acadêmico · Ciências Contábeis</div>
+    <h1>Apuração Tributária e Modelagem de Cálculos no Lucro Presumido</h1>
+    <p class="lead">
+      Aplicação prática dos conhecimentos da disciplina <strong>Prática Tributária e Trabalhista</strong>,
+      utilizando planilhas eletrônicas para estruturar memórias de cálculo, regras tributárias e lógica
+      condicional em um cenário empresarial simulado.
+    </p>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section>
+  <h2>1. Contexto do trabalho</h2>
+  <div class="card">
+    <p>
+      O projeto acadêmico foi desenvolvido a partir de uma empresa fictícia do comércio varejista
+      de óculos, localizada no Ceará e enquadrada no regime do <strong>Lucro Presumido</strong>.
+      O exercício teve como objetivo transformar os conhecimentos teóricos da disciplina em uma
+      estrutura prática de apuração tributária.
+    </p>
+    <p>
+      A análise considerou o primeiro trimestre de 2026 e envolveu a construção de memórias de
+      cálculo para <strong>ICMS, PIS, COFINS, IRPJ e CSLL</strong>, observando as características
+      operacionais apresentadas no estudo e os critérios legais adotados no trabalho.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>2. O que foi estudado e modelado</h2>
+  <div class="grid">
+    <div class="card">
+      <span class="tag">Tributação estadual</span>
+      <h3>ICMS</h3>
+      <p>Apuração mensal pelo confronto entre créditos das entradas e débitos das saídas, considerando a alíquota de 20% e o efeito dos descontos incondicionais na base das vendas.</p>
+    </div>
+    <div class="card">
+      <span class="tag">Contribuições</span>
+      <h3>PIS e COFINS</h3>
+      <p>Apuração mensal no regime cumulativo, com alíquotas de 0,65% e 3,00%, respectivamente, utilizando como base a receita de vendas com exclusão do ICMS destacado.</p>
+    </div>
+    <div class="card">
+      <span class="tag">Tributação federal</span>
+      <h3>IRPJ</h3>
+      <p>Modelagem trimestral da presunção para comércio, com separação entre a parcela dentro do limite e o excedente sujeito ao acréscimo de 10% sobre o percentual de presunção.</p>
+    </div>
+    <div class="card">
+      <span class="tag">Tributação federal</span>
+      <h3>CSLL</h3>
+      <p>Modelagem trimestral com presunção de 12% e alíquota de 9%, incluindo uma lógica condicional para controlar simultaneamente faturamento e vigência temporal.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>3. Estrutura lógica da planilha</h2>
+  <div class="card">
+    <div class="flow">
+      <div class="step">Dados mensais</div><div class="arrow">→</div>
+      <div class="step">Base de cálculo</div><div class="arrow">→</div>
+      <div class="step">Regra tributária</div><div class="arrow">→</div>
+      <div class="step">Fórmula condicional</div><div class="arrow">→</div>
+      <div class="step">Memória de cálculo</div>
+    </div>
+    <p>
+      A proposta não foi apenas inserir valores em uma planilha, mas representar as regras do exercício
+      por meio de fórmulas. Assim, alterações nos dados de entrada poderiam repercutir automaticamente
+      nos resultados.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>4. Fórmulas e lógica aplicada</h2>
+
+  <div class="card">
+    <span class="tag">IRPJ · Presunção trimestral</span>
+    <h3>Separação do limite e do excedente</h3>
+    <div class="formula">=SE(SOMA(C36:E36)&gt;1250000;
+(1250000*8%)+((SOMA(C36:E36)-1250000)*8%*1,1);
+SOMA(C36:E36)*8%)</div>
+    <div class="explain">
+      <strong>Lógica:</strong> a função <code>SE()</code> verifica se a receita trimestral ultrapassa
+      R$ 1.250.000,00. Se não ultrapassar, aplica-se 8% sobre a receita. Se ultrapassar, a fórmula
+      aplica 8% sobre o limite e 8,8% sobre o excedente, resultando em uma base de presunção segmentada.
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:18px">
+    <span class="tag">CSLL · Controle de faturamento e vigência</span>
+    <h3>Trava lógica com condição financeira + condição temporal</h3>
+    <div class="formula">=SE(E(SOMA(C53:E53)&gt;1250000;
+OU(C52&gt;=DATA(2026;4;1);
+D52&gt;=DATA(2026;4;1);
+E52&gt;=DATA(2026;4;1)));
+(1250000*12%)+((SOMA(C53:E53)-1250000)*12%*1,1);
+SOMA(C53:E53)*12%)</div>
+    <div class="explain">
+      <strong>Lógica:</strong> a função <code>E()</code> exige que as duas condições principais sejam
+      satisfeitas: ultrapassagem do limite de faturamento e ocorrência da data de vigência definida
+      no trabalho. A função <code>OU()</code> verifica as datas dos três meses do trimestre.
+      Se uma das condições não for satisfeita, permanece a aplicação do percentual padrão de 12%.
+      Quando ambas são satisfeitas, a fórmula separa o limite e o excedente, aplicando 12% à primeira
+      parcela e 13,2% à parcela excedente.
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>5. Fundamentos dos cálculos</h2>
+  <div class="card">
+    <table>
+      <thead>
+        <tr><th>Tributo</th><th>Periodicidade no trabalho</th><th>Estrutura principal</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>ICMS</td><td>Mensal</td><td>Créditos das entradas − débitos das saídas</td></tr>
+        <tr><td>PIS</td><td>Mensal</td><td>Receita líquida de vendas × 0,65%</td></tr>
+        <tr><td>COFINS</td><td>Mensal</td><td>Receita líquida de vendas × 3,00%</td></tr>
+        <tr><td>IRPJ</td><td>Trimestral</td><td>Presunção de 8% + tratamento do excedente; imposto de 15% e adicional conforme a memória de cálculo</td></tr>
+        <tr><td>CSLL</td><td>Trimestral</td><td>Presunção de 12% × alíquota de 9%, com regra condicional para eventual majoração</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>6. Competências desenvolvidas</h2>
+  <div class="grid">
+    <div class="card"><h3>Interpretação tributária</h3><p>Leitura das regras utilizadas no exercício e tradução dos critérios legais em etapas de cálculo.</p></div>
+    <div class="card"><h3>Modelagem em planilhas</h3><p>Organização de dados, bases de cálculo, memórias e resultados em estrutura eletrônica.</p></div>
+    <div class="card"><h3>Lógica condicional</h3><p>Uso de <code>SE()</code>, <code>E()</code>, <code>OU()</code>, <code>SOMA()</code> e funções de data para representar regras.</p></div>
+    <div class="card"><h3>Integração teoria–prática</h3><p>Aplicação de conhecimentos de Contabilidade e Legislação Tributária em um cenário empresarial simulado.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>7. Resultado acadêmico</h2>
+  <div class="card">
+    <p>
+      O principal resultado do projeto foi a construção de uma <strong>memória de cálculo estruturada</strong>,
+      na qual os dados operacionais da empresa são transformados em bases tributáveis por meio de regras
+      explícitas e fórmulas reproduzíveis.
+    </p>
+    <p>
+      Dessa forma, o trabalho demonstra como a disciplina <strong>Prática Tributária e Trabalhista</strong>
+      pode ultrapassar o cálculo manual e incorporar raciocínio lógico, modelagem de dados e uso de
+      ferramentas eletrônicas para apoiar a análise contábil e tributária.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    Projeto acadêmico baseado no trabalho da disciplina Prática Tributária e Trabalhista.
+    Conteúdo apresentado como documentação técnica do estudo e da modelagem realizada.
+  </div>
+</footer>
+
+</body>
+</html>
